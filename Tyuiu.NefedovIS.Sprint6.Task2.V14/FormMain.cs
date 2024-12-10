@@ -55,5 +55,10 @@ namespace Tyuiu.NefedovIS.Sprint6.Task2.V14
         {
 
         }
+
+        private void groupBoxTask_NIS_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
