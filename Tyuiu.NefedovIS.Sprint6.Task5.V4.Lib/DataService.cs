@@ -23,7 +23,7 @@ namespace Tyuiu.NefedovIS.Sprint6.Task5.V4.Lib
                     index++;
                 }
             }
-            valueArray = valueArray.Where(val => val % 10 == 0).ToArray();
+            valueArray = valueArray.Where(val => val % 1 == 0).ToArray();
             return valueArray;
         }
     }
