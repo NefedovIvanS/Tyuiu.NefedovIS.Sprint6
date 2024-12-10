@@ -13,7 +13,7 @@ namespace Tyuiu.NefedovIS.Sprint6.Task0.V15
 {
     public partial class FormMain : Form
     {
-        
+
         public FormMain()
         {
             InitializeComponent();
@@ -45,5 +45,9 @@ namespace Tyuiu.NefedovIS.Sprint6.Task0.V15
             MessageBox.Show("Таск 0 выполнил студент группы СМАРТб-24-1 Нефедов Иван Сергеевич", "Сообщение", MessageBoxButtons.OK);
         }
 
+        private void groupBoxTask_NIS_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

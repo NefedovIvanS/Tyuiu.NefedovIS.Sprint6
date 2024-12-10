@@ -56,6 +56,7 @@
             groupBoxTask_NIS.TabIndex = 0;
             groupBoxTask_NIS.TabStop = false;
             groupBoxTask_NIS.Text = "Условие";
+            groupBoxTask_NIS.Enter += groupBoxTask_NIS_Enter;
             // 
             // pictureBoxTask_NIS
             // 
