@@ -30,7 +30,10 @@ namespace Tyuiu.NefedovIS.Sprint6.Task7.V14.Lib
             return arrayValues;
         }
 
-        
+        public int[,] GetMatrix(int[,] matrix)
+        {
+            return matrix;
+        }
 
         public int[,] GetStartMatrix(string path)
         {
@@ -50,11 +53,6 @@ namespace Tyuiu.NefedovIS.Sprint6.Task7.V14.Lib
                 }
             }
             return arrayValues;
-        }
-
-        public int[,] GetMatrix(int[,] matrix)
-        {
-            throw new NotImplementedException();
         }
     }
 }
