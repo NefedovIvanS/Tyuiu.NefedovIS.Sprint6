@@ -14,7 +14,7 @@ namespace Tyuiu.NefedovIS.Sprint6.Task6.V22.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
                     fragments = line.Split(' ');
-                    result += fragments + " ";
+                    result += fragments[0] + " ";
                 }
             }
             result = result.Trim();
