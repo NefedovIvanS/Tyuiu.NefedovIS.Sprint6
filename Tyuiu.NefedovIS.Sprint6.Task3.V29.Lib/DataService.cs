@@ -6,25 +6,21 @@ namespace Tyuiu.NefedovIS.Sprint6.Task3.V29.Lib
         public int[,] Calculate(int[,] matrix)
         {
             int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
 
-            // Сортировка строк по пятому столбцу
-            for (int i = 0; i < rows - 1; i++)
+            // Извлечение пятого столбца
+            int[] fifthColumn = new int[rows];
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < rows - i - 1; j++)
-                {
-                    // Если значение в пятом столбце текущей строки больше, чем у следующей
-                    if (matrix[j, 4] > matrix[j + 1, 4])
-                    {
-                        // Меняем строки местами
-                        for (int k = 0; k < cols; k++)
-                        {
-                            int temp = matrix[j, k];
-                            matrix[j, k] = matrix[j + 1, k];
-                            matrix[j + 1, k] = temp;
-                        }
-                    }
-                }
+                fifthColumn[i] = matrix[i, 4];
+            }
+
+            // Сортировка пятого столбца
+            Array.Sort(fifthColumn);
+
+            // Запись отсортированного столбца обратно в массив
+            for (int i = 0; i < rows; i++)
+            {
+                matrix[i, 4] = fifthColumn[i];
             }
 
             return matrix;
