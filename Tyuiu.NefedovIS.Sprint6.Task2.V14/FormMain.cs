@@ -1,5 +1,5 @@
-using Tyuiu.NefedovIS.Sprint6.Task1.V16.Lib;
-namespace Tyuiu.NefedovIS.Sprint6.Task1.V16
+using Tyuiu.NefedovIS.Sprint6.Task2.V14.Lib;
+namespace Tyuiu.NefedovIS.Sprint6.Task2.V14
 {
     public partial class FormMain : Form
     {
@@ -14,29 +14,25 @@ namespace Tyuiu.NefedovIS.Sprint6.Task1.V16
             {
                 int startStep = Convert.ToInt32(textBoxStartStep_NIS.Text);
                 int stopStep = Convert.ToInt32(textBoxStopStep_NIS.Text);
-                string strLine;
+
                 int len = dataService.GetMassFunction(startStep, stopStep).Length;
-
                 double[] valueArray = dataService.GetMassFunction(startStep, stopStep);
+                chartResult_NIS.Titles.Add("5 - 3*i + (1+Math.Sin(i))/(2*i - 0.5)");
 
-                textBoxResult_NIS.Text = "";
-                textBoxResult_NIS.AppendText("+----------+----------+" + Environment.NewLine);
-                textBoxResult_NIS.AppendText("|    X     |    f(x)  |" + Environment.NewLine);
-                textBoxResult_NIS.AppendText("+----------+----------+" + Environment.NewLine);
-                for (int i = 0; i <= len - 1; i++)
+                chartResult_NIS.ChartAreas[0].AxisX.Title = "Ось X";
+                chartResult_NIS.ChartAreas[0].AxisY.Title = "Ось Y";
+
+                for (int i = 0; i < len; i++)
                 {
-                    strLine = String.Format("|{0,5:d}     | {1,6:f2}   |", startStep, valueArray[i]);
-                    textBoxResult_NIS.AppendText(strLine + Environment.NewLine);
+                    dataGridView_NIS.Rows.Add(Convert.ToString(startStep), valueArray[i]);
+                    chartResult_NIS.Series[0].Points.AddXY(startStep, valueArray[i]);
                     startStep++;
                 }
-                textBoxResult_NIS.AppendText("+----------+----------+" + Environment.NewLine);
-
             }
             catch
             {
                 MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         private void textBoxSteps_NIS_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -47,10 +43,15 @@ namespace Tyuiu.NefedovIS.Sprint6.Task1.V16
         }
         private void buttonHelp_NIS_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 1 выполнил студент группы СМАРТб-24-1 Нефедов Иван Сергеевич", "Сообщение", MessageBoxButtons.OK);
+            MessageBox.Show("Таск 2 выполнил студент группы СМАРТб-24-1 Нефедов Иван Сергеевич", "Сообщение", MessageBoxButtons.OK);
         }
 
-        private void groupBoxTask_NIS_Enter(object sender, EventArgs e)
+        private void textBoxTask_NIS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
         {
 
         }
