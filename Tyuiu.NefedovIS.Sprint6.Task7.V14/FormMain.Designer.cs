@@ -117,7 +117,7 @@ namespace Tyuiu.NefedovIS.Sprint6.Task7.V14
             buttonDone_NIS.TabIndex = 3;
             toolTip_NIS.SetToolTip(buttonDone_NIS, "Выполнить обработку данных");
             buttonDone_NIS.UseVisualStyleBackColor = false;
-            buttonDone_NIS.Click += buttonDone_NIS_Click;
+            //buttonDone_NIS.Click += buttonDone_NIS_Click;
             buttonDone_NIS.MouseEnter += buttonDone_NIS_MouseEnter;
             // 
             // buttonOpenFile_NIS
@@ -130,7 +130,7 @@ namespace Tyuiu.NefedovIS.Sprint6.Task7.V14
             buttonOpenFile_NIS.TabIndex = 2;
             toolTip_NIS.SetToolTip(buttonOpenFile_NIS, "Открыть файл для обработки данных в формате CSV\r\n");
             buttonOpenFile_NIS.UseVisualStyleBackColor = false;
-            buttonOpenFile_NIS.Click += buttonOpenFile_NIS_Click;
+            //buttonOpenFile_NIS.Click += buttonOpenFile_NIS_Click;
             buttonOpenFile_NIS.MouseEnter += buttonOpenFile_NIS_MouseEnter;
             // 
             // panel2
