@@ -52,6 +52,7 @@
             groupBoxTask_NIS.TabIndex = 3;
             groupBoxTask_NIS.TabStop = false;
             groupBoxTask_NIS.Text = "Условие";
+            groupBoxTask_NIS.Enter += groupBoxTask_NIS_Enter;
             // 
             // dataGridView_NIS
             // 
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView_NIS).EndInit();
             ResumeLayout(false);
         }
-
 
         private TextBox textBoxTask_NIS;
         private GroupBox groupBoxTask_NIS;

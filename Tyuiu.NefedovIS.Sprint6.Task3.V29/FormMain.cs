@@ -44,5 +44,10 @@ namespace Tyuiu.NefedovIS.Sprint6.Task3.V29
         {
             MessageBox.Show("Таск 3 выполнил студент группы СМАРТб-24-1 Нефедов Иван Сергеевич", "Сообщение", MessageBoxButtons.OK);
         }
+
+        private void groupBoxTask_NIS_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
