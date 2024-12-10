@@ -57,5 +57,10 @@ namespace Tyuiu.NefedovIS.Sprint6.Task4.V4
                 MessageBox.Show("—бой при сохранении файла", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBoxTask_NIS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
