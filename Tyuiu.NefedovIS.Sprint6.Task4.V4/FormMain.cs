@@ -62,5 +62,10 @@ namespace Tyuiu.NefedovIS.Sprint6.Task4.V4
         {
 
         }
+
+        private void chart_NIS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

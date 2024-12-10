@@ -66,6 +66,7 @@
             chart_NIS.TabIndex = 0;
             chart_NIS.Text = "chart1";
             chart_NIS.UseWaitCursor = true;
+            chart_NIS.Click += chart_NIS_Click;
             // 
             // panel1
             // 
